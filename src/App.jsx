@@ -1,23 +1,43 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import Sidebar from './Sidebar/Sidebar'
 import Chat from './Chat/Chat'
-import { useSelector } from 'react-redux'
-import { selectUser } from './store/userSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectUser, login, logout } from './store/userSlice'
+import Login from './Login/Login' 
+import { auth } from './firebase'
 
 function App() {
+  const dispach = useDispatch()
   const user = useSelector(selectUser)
+
+  useEffect(() => {
+    auth.onAuthStateChanged(authUser => {
+      console.log('user is authenticated', authUser)
+      if (authUser) {
+        dispach(login({
+          uid: authUser.uid,
+          photo: authUser.photoURL,
+          email: authUser.email,
+          displayName: authUser.displayName,
+        }))
+      } else {
+        dispach(logout())
+      }
+    })
+  }, [dispach])
 
   return (
     <div className="app">
-      {user ? (
+      {user?
+      (
         <>
           <Sidebar />
           <Chat />
         </>
-      ): (
-        <h2>You need to login</h2>
-      )}
+      ):
+        <Login />
+      }
     </div>
   );
 }
