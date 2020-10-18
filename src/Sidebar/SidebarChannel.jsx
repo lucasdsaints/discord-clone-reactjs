@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './SidebarChannel.css';
 
-export default function SidebarChannel({ id, channel }) {
+export default function SidebarChannel() {
   return (
     <div className="sidebarChannel">
       <h4>
@@ -9,5 +9,5 @@ export default function SidebarChannel({ id, channel }) {
         YouTube
       </h4>
     </div>
-  )
+  );
 }

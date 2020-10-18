@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
 
 export const userSlice = createSlice({
   name: 'user',
@@ -9,14 +10,14 @@ export const userSlice = createSlice({
     login: (state, action) => {
       state.user = action.payload;
     },
-    logout: state => {
-      state.user = null
+    logout: (state) => {
+      state.user = null;
     },
   },
-})
+});
 
-export const { logout, login } = userSlice.actions
+export const { logout, login } = userSlice.actions;
 
-export const selectUser = state => state.user.user
+export const selectUser = (state) => state.user.user;
 
-export default userSlice.reducer
+export default userSlice.reducer;

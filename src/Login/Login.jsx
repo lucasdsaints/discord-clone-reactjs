@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from '@material-ui/core'
+import React from 'react';
+import { Button } from '@material-ui/core';
 import { auth, provider } from '../firebase';
 
-import './Login.css'
+import './Login.css';
 
 function Login() {
   const signIn = () => {
     auth.signInWithPopup(provider)
-      .catch(error => alert(error.message))
-  }
+      .catch((error) => alert(error.message));
+  };
 
   return (
     <div className="login">
@@ -23,7 +23,7 @@ function Login() {
         <Button onClick={signIn}>Sign In</Button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

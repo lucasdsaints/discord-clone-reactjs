@@ -1,6 +1,6 @@
-import { Avatar } from '@material-ui/core'
-import React from 'react'
-import './Message.css'
+import { Avatar } from '@material-ui/core';
+import React from 'react';
+import './Message.css';
 
 function Message() {
   return (
@@ -16,7 +16,7 @@ function Message() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default Message
+export default Message;
