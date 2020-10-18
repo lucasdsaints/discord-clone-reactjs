@@ -24,11 +24,11 @@
 
 .login__logo > img {
   max-width: 300px;
-  /* border: 1px solid tomato; */
 }
 
 .login__logo > span {
-  color: #677bc4;
+  color: #e74947;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1.4em;
   position: absolute;
   bottom: 10px;
@@ -36,6 +36,7 @@
   transform: rotate(-10deg);
   letter-spacing: .1em;
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .login__card > button {
