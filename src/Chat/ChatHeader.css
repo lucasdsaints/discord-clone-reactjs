@@ -21,8 +21,12 @@
 .chatHeader__right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex: 0.5;
+}
+
+.chatHeader__right > *:nth-child(n + 2) {
+  margin-left: 10px;
 }
 
 .chatHeader__right > .MuiSvgIcon-root {
