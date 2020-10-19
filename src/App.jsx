@@ -5,7 +5,7 @@ import Sidebar from './Sidebar/Sidebar';
 import Chat from './Chat/Chat';
 import { selectUser, login, logout } from './store/userSlice';
 import Login from './Login/Login';
-import { auth } from './firebase';
+import { auth } from './config/firebase';
 
 function App() {
   const dispach = useDispatch();

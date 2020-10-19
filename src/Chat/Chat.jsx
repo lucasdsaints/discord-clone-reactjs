@@ -10,7 +10,7 @@ import ChatHeader from './ChatHeader';
 import Message from './Message';
 import { selectUser } from '../store/userSlice';
 import { selectChannelId, selectChannelName } from '../store/appSlice';
-import db, { firebase } from '../firebase';
+import db, { firebase } from '../config/firebase';
 
 function Chat() {
   const loggedInUser = useSelector(selectUser);

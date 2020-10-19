@@ -12,7 +12,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import { useSelector } from 'react-redux';
 import SidebarChannel from './SidebarChannel';
 import { selectUser } from '../store/userSlice';
-import db, { auth } from '../firebase';
+import db, { auth } from '../config/firebase';
 
 export default function Sidebar() {
   const user = useSelector(selectUser);
